@@ -1,6 +1,6 @@
 package com.sekretess;
 
-import org.whispersystems.libsignal.*;
+import org.signal.libsignal.protocol.SignalProtocolAddress;
 
 
 public class UserB extends User {

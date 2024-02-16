@@ -1,14 +1,16 @@
 package com.sekretess;
 
-import org.whispersystems.libsignal.*;
-import org.whispersystems.libsignal.ecc.Curve;
-import org.whispersystems.libsignal.protocol.CiphertextMessage;
-import org.whispersystems.libsignal.protocol.PreKeySignalMessage;
+import org.signal.libsignal.protocol.*;
+import org.signal.libsignal.protocol.message.CiphertextMessage;
+import org.signal.libsignal.protocol.message.PreKeySignalMessage;
+
 
 import java.io.UnsupportedEncodingException;
 
 public class Main {
-    public static void main(String[] args) throws InvalidKeyException, UntrustedIdentityException, UnsupportedEncodingException, InvalidMessageException, DuplicateMessageException, InvalidKeyIdException, LegacyMessageException, InvalidVersionException {
+    public static void main(String[] args) throws InvalidKeyException, UntrustedIdentityException,
+            UnsupportedEncodingException, InvalidMessageException, DuplicateMessageException, InvalidKeyIdException,
+            LegacyMessageException, InvalidVersionException, NoSessionException {
         UserA userA = new UserA();
         userA.initializeKeys();
 
@@ -22,6 +24,7 @@ public class Main {
         SessionCipher decoder = userA.buildSessionWith(userB);
         byte[] decrypt = decoder.decrypt(new PreKeySignalMessage(encrypt.serialize()));
         System.out.println(new String(decrypt));
+
 
 
     }

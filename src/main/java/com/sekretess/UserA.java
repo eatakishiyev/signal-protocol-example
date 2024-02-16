@@ -1,7 +1,7 @@
 package com.sekretess;
 
 import lombok.Data;
-import org.whispersystems.libsignal.*;
+import org.signal.libsignal.protocol.SignalProtocolAddress;
 
 @Data
 
