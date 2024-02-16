@@ -1,20 +1,13 @@
 package com.sekretess;
 
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
 import org.whispersystems.libsignal.*;
-import org.whispersystems.libsignal.state.*;
-import org.whispersystems.libsignal.state.impl.InMemoryIdentityKeyStore;
-import org.whispersystems.libsignal.state.impl.InMemorySignalProtocolStore;
-import org.whispersystems.libsignal.util.KeyHelper;
-
-import java.util.List;
 
 @Data
 
-public class Alice extends User {
-    private final String NAME = "alice";
-    private final int DEVICE_ID = 5412;
+public class UserA extends User {
+    private final String NAME = "userA";
+    private final int DEVICE_ID = 1;
 
     @Override
     public SignalProtocolAddress getSignalProtocolAddress() {
